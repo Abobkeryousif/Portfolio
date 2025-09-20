@@ -7,72 +7,51 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Base styles for the page with a light theme */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* bg-slate-50 */
-            color: #1e293b; /* text-slate-800 */
+            background-color: #f8fafc;
+            color: #1e293b;
             overflow-x: hidden;
         }
-
-        /* Smooth scrolling behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Parallax effect for the hero section background */
-        .hero-section {
-            background-attachment: fixed;
-        }
-
-        /* Custom text shadow for better readability on images */
+        html { scroll-behavior: smooth; }
+        .hero-section { background-attachment: fixed; }
         .text-shadow-strong {
             text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
         }
-
-        /* Styling for skill badges in the "About Me" section */
         .skill-badge {
-            background-color: #e2e8f0; /* bg-slate-200 */
-            color: #334155; /* text-slate-700 */
+            background-color: #e2e8f0;
+            color: #334155;
             padding: 0.5rem 1rem;
-            border-radius: 9999px; /* rounded-full */
-            font-weight: 600; /* font-semibold */
+            border-radius: 9999px;
+            font-weight: 600;
             transition: all 0.3s ease;
-            border: 1px solid #cbd5e0; /* border-slate-300 */
+            border: 1px solid #cbd5e0;
         }
-
         .skill-badge:hover {
-            background-color: #cbd5e0; /* bg-slate-300 */
+            background-color: #cbd5e0;
             transform: translateY(-3px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-
-        /* Base styles for project cards */
         .project-card {
-            /* Using CSS variables to define a unique accent color per card */
-            --card-accent-color: #64748b; /* Default color: slate-500 */
-            
-            background-color: #ffffff; /* bg-white */
-            border-radius: 0.75rem; /* rounded-xl */
-            border: 1px solid #e2e8f0; /* border-slate-200 */
+            --card-accent-color: #64748b;
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
             border-top-width: 4px;
             border-top-color: var(--card-accent-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden; /* Ensures image corners are rounded */
+            overflow: hidden;
         }
-
-        /* Hover effect for project cards with a colored glow */
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1), 0 0 20px -5px var(--card-accent-color);
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1),
+                        0 0 20px -5px var(--card-accent-color);
         }
-
-        /* Style for the sticky header */
         .sticky-header {
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.85); /* White with transparency */
-            border-bottom: 1px solid #e2e8f0; /* border-slate-200 */
+            background-color: rgba(255, 255, 255, 0.85);
+            border-bottom: 1px solid #e2e8f0;
         }
     </style>
 </head>
@@ -91,7 +70,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <section id="hero" class="hero-section relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop');">
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="relative z-10 text-white p-6 max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-shadow-strong">Welcome to My Portfolio</h1>
@@ -108,20 +87,19 @@
             <h2 class="text-5xl font-extrabold text-slate-800 mb-12">About Me</h2>
             <div class="max-w-4xl mx-auto text-lg leading-relaxed text-slate-600">
                 <p class="mb-6">
-                    I am Abobker Yousif, a dedicated .NET Developer passionate about creating innovative and effective solutions. I have extensive experience in web development and love transforming complex ideas into user-friendly applications.
+                    I am Abobker Yousif, a dedicated .NET Developer passionate about creating innovative and effective solutions.
                 </p>
                 <p class="mb-12">
-                    I believe that technology can make a positive difference in the world, and I constantly strive to learn new things in this field to deliver my best.
+                    I believe that technology can make a positive difference in the world, and I constantly strive to learn new things.
                 </p>
-
                 <h3 class="text-3xl font-bold text-slate-800 mb-8">Skills & Expertise</h3>
                 <div class="flex flex-wrap justify-center items-center gap-3">
                     <span class="skill-badge">.NET Core</span>
                     <span class="skill-badge">RESTful API</span>
                     <span class="skill-badge">Entity Framework Core</span>
-                    <span class="skill-badge">Microsoft SQL Server</span>
+                    <span class="skill-badge">SQL Server</span>
                     <span class="skill-badge">PostgreSQL</span>
-                    <span class="skill-badge">Redis & Cache</span>
+                    <span class="skill-badge">Redis</span>
                     <span class="skill-badge">Postman</span>
                     <span class="skill-badge">Git & GitHub</span>
                 </div>
@@ -135,112 +113,75 @@
             <h2 class="text-5xl font-extrabold text-slate-800 text-center mb-16">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                <div class="project-card" style="--card-accent-color: #FF5733;">
-                    <img src="https://placehold.co/600x400/FF5733/FFFFFF?text=PhramaDrop" alt="PhramaDrop Project Image" class="w-full h-56 object-cover">
+                <!-- Project 1: FoodRush -->
+                <div class="project-card" style="--card-accent-color: #FF6B35;">
+                    <img src="images/Foodrush.png" alt="FoodRush Project Image" class="w-full h-56 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">PhramaDrop</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">FoodRush</h3>
                         <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/PhramaDrop" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
+                                View Project 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
-                            <a href="https://github.com/Abobkeryousif/PhramaDrop" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
+                            <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
                         </div>
                     </div>
                 </div>
 
-   
-                <div class="project-card" style="--card-accent-color: #3357FF;">
-                    <img src="https://placehold.co/600x400/3357FF/FFFFFF?text=Pexel_Store" alt="Pexel_Store Project Image" class="w-full h-56 object-cover">
+                <!-- Project 2: Pexel_Store -->
+                <div class="project-card" style="--card-accent-color: #1E90FF;">
+                    <img src="images/pexelstore.png" alt="Pexel_Store Project Image" class="w-full h-56 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-slate-900 mb-3">Pexel_Store</h3>
                         <div class="flex justify-between items-center mt-4">
                             <a href="https://github.com/Abobkeryousif/Pexel_Store" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                View Project 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                             <a href="https://github.com/Abobkeryousif/Pexel_Store" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
                         </div>
                     </div>
                 </div>
 
-          
-                <div class="project-card" style="--card-accent-color: #33FF57;">
-                    <img src="https://placehold.co/600x400/33FF57/000000?text=Foodyz" alt="Foodyz Project Image" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Foodyz</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/Foodyz" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/Foodyz" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-      
-                <div class="project-card" style="--card-accent-color: #F333FF;">
-                    <img src="https://placehold.co/600x400/F333FF/FFFFFF?text=Wafra" alt="Wafra Project Image" class="w-full h-56 object-cover">
+                <!-- Project 3: Wafra -->
+                <div class="project-card" style="--card-accent-color: #2ECC71;">
+                    <img src="images/Wafraa.jpg" alt="Wafra Project Image" class="w-full h-56 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-slate-900 mb-3">Wafra</h3>
                         <div class="flex justify-between items-center mt-4">
                             <a href="https://github.com/Abobkeryousif/Wafra" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                View Project 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                             <a href="https://github.com/Abobkeryousif/Wafra" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
                         </div>
                     </div>
                 </div>
 
-               
-
-          
-                <div class="project-card" style="--card-accent-color: #C70039;">
-                    <img src="https://placehold.co/600x400/C70039/FFFFFF?text=OAuth2.0" alt="OAuth2.0 Project Image" class="w-full h-56 object-cover">
+                <!-- Project 4: OAuth2.0 -->
+                <div class="project-card" style="--card-accent-color: #F1C40F;">
+                    <img src="images/OAuth2.0.png" alt="OAuth2.0 Project Image" class="w-full h-56 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-slate-900 mb-3">OAuth2.0</h3>
                         <div class="flex justify-between items-center mt-4">
                             <a href="https://github.com/Abobkeryousif/OAuth2.0" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                View Project 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                             <a href="https://github.com/Abobkeryousif/OAuth2.0" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
                         </div>
                     </div>
                 </div>
-           
-                <div class="project-card" style="--card-accent-color: #27AE60;">
-                    <img src="https://placehold.co/600x400/27AE60/FFFFFF?text=CountryDataStandard" alt="CountryDataStandard Project Image" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">CountryDataStandard</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/CountryDataStandard" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/CountryDataStandard" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Project 8: ECom -->
-                <div class="project-card" style="--card-accent-color: #E67E22;">
-                    <img src="https://placehold.co/600x400/E67E22/FFFFFF?text=ECom" alt="ECom Project Image" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">ECom</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/ECom" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/ECom" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
+                <!-- Project 5: NZwalksFinalProject -->
                 <div class="project-card" style="--card-accent-color: #9B59B6;">
-                    <img src="https://placehold.co/600x400/9B59B6/FFFFFF?text=NZwalks" alt="NZwalksFinalProject Project Image" class="w-full h-56 object-cover">
+                    <img src="images/Nzwalks.jpg" alt="NZwalksFinalProject Project Image" class="w-full h-56 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-slate-900 mb-3">NZwalksFinalProject</h3>
                         <div class="flex justify-between items-center mt-4">
                             <a href="https://github.com/Abobkeryousif/NZwalksFinalProject" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                View Project 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                             <a href="https://github.com/Abobkeryousif/NZwalksFinalProject" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
                         </div>
@@ -260,42 +201,22 @@
             </p>
             <div class="flex justify-center gap-6 mt-8">
                 <a href="https://www.linkedin.com/in/abubker-yousif-93b148318/" target="_blank" class="text-slate-500 hover:text-blue-600 transition-transform duration-300 transform hover:scale-110" aria-label="LinkedIn">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.761-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.761-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
                 </a>
                 <a href="https://github.com/Abobkeryousif" target="_blank" class="text-slate-500 hover:text-gray-800 transition-transform duration-300 transform hover:scale-110" aria-label="GitHub">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.799 8.207 11.387.6.11.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.332-1.757-1.332-1.757-1.09-.745.083-.73.083-.73 1.205.086 1.838 1.238 1.838 1.238 1.07 1.834 2.807 1.304 3.49.997.108-.775.418-1.304.762-1.604-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.382 1.236-3.22-.124-.304-.536-1.52.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.4 3.003-.404 1.02.004 2.046.138 3.003.404 2.293-1.552 3.301-1.23 3.301-1.23.653 1.656.241 2.872.118 3.176.77.838 1.236 1.91 1.236 3.22 0 4.61-2.806 5.624-5.478 5.922.43.37.817 1.102.817 2.222v3.293c0 .318.216.69.827.577C20.562 21.799 24 17.302 24 12c0-6.627-5.373-12-12-12z"></path></svg>
-                </a>
-                <a href="tel:+966543927332" target="_blank" class="text-slate-500 hover:text-green-600 transition-transform duration-300 transform hover:scale-110" aria-label="Call">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.03.75-.25 1.02l-2.2 2.2z"></path></svg>
+                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.799 8.207 11.387.6.11.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.332-1.757-1.332-1.757-1.09-.745.083-.73.083-.73 1.205.086 1.838 1.238 1.838 1.238 1.07 1.834 2.807 1.304 3.49.997.108-.775.418-1.304.762-1.604-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.382 1.236-3.22-.124-.304-.536-1.52.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.4 3.003-.404 1.02.004 2.046.138 3.003.404 2.293-1.552 3.301-1.23 3.301-1.23.653 1.656.241 2.872.118 3.176.77.838 1.236 1.91 1.236 3.22 0 4.61-2.806 5.624-5.478 5.922.43.37.823 1.096.823 2.21v3.283c0 .32.218.694.825.576 4.765-1.589 8.202-6.085 8.202-11.386 0-6.627-5.373-12-12-12z"></path></svg>
                 </a>
                 <a href="mailto:bakryhassona7@gmail.com" class="text-slate-500 hover:text-red-600 transition-transform duration-300 transform hover:scale-110" aria-label="Email">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065l-11.938-6.904c.135-.361.359-.688.646-.961.288-.274.63-.489 1.004-.635.375-.146.774-.221 1.177-.221h17.222c.403 0 .802.075 1.177.221.374.146.716.361 1.004.635.287.273.511.6.646.961l-11.938 6.904zm0 2.935l12-6.947v10.947c0 .552-.448 1-1 1h-22c-.552 0-1-.448-1-1v-10.947l12 6.947z"></path></svg>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-100 text-slate-500 p-6 text-center border-t border-slate-200">
-        <p>&copy; <span id="current-year"></span> Abobker Yousif. All rights reserved.</p>
+    <footer class="bg-slate-800 text-slate-300 text-center py-8">
+        <p>&copy; 2025 Abobker Yousif. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetElement = document.querySelector(this.getAttribute('href'));
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Update current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
