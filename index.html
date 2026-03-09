@@ -1,242 +1,321 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abobker Yousif - Projects Portfolio</title>
+    <title>Abubaker Yousif | Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0f1a;
+            color: #f1f5f9;
         }
-        html { scroll-behavior: smooth; }
-        .hero-section { background-attachment: fixed; }
-        .text-shadow-strong {
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .skill-badge {
-            background-color: #e2e8f0;
-            color: #334155;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid #cbd5e0;
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .skill-badge:hover {
-            background-color: #cbd5e0;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.6);
+            border-color: #3b82f6;
+            transform: translateY(-8px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
         }
         .project-card {
-            --card-accent-color: #64748b;
-            background-color: #ffffff;
-            border-radius: 0.75rem;
-            border: 1px solid #e2e8f0;
-            border-top-width: 4px;
-            border-top-color: var(--card-accent-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 1.5rem;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
         }
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1),
-                        0 0 20px -5px var(--card-accent-color);
+            border-color: #3b82f6;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
         }
-        .sticky-header {
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.85);
-            border-bottom: 1px solid #e2e8f0;
+        .skill-icon {
+            transition: all 0.3s ease;
+            filter: grayscale(20%);
+        }
+        .skill-icon:hover {
+            filter: grayscale(0%);
+            transform: scale(1.2) rotate(5deg);
+        }
+        .badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Sticky Header -->
-    <header class="sticky-header fixed w-full z-20 top-0">
-        <nav class="container mx-auto flex justify-between items-center p-4 text-slate-800">
-            <a href="#hero" class="text-2xl font-bold rounded-md px-3 py-1 hover:bg-blue-600 hover:text-white transition-colors duration-300">Abobker Yousif</a>
-            <ul class="hidden md:flex items-center space-x-2">
-                <li><a href="#about" class="text-lg font-medium text-slate-600 hover:text-blue-600 transition-colors duration-300 px-3 py-2 rounded-md">About</a></li>
-                <li><a href="#projects" class="text-lg font-medium text-slate-600 hover:text-blue-600 transition-colors duration-300 px-3 py-2 rounded-md">Projects</a></li>
-                <li><a href="#contact" class="text-lg font-medium text-slate-600 hover:text-blue-600 transition-colors duration-300 px-3 py-2 rounded-md">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass-nav rounded-2xl px-6 py-3">
+            <a href="#" class="text-xl font-bold tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">AY</div>
+                <span>Abubaker<span class="text-blue-500">.</span></span>
+            </a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-white transition-colors">Skills</a></li>
+                <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="flex items-center gap-4">
+                <a href="mailto:bakryhassona7@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-blue-900/20">
+                    Email Me
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop');">
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative z-10 text-white p-6 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-shadow-strong">Welcome to My Portfolio</h1>
-            <p class="text-xl md:text-2xl mb-8 text-slate-200 text-shadow-strong">A Passionate and Creative .NET Developer</p>
-            <a href="#projects" class="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105 shadow-blue-500/30 hover:shadow-blue-600/50">
-                Explore My Projects
-            </a>
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden px-6 text-center">
+        <div class="hero-blob top-1/4 left-1/4"></div>
+        <div class="hero-blob bottom-1/4 right-1/4" style="opacity: 0.5;"></div>
+        
+        <div class="max-w-5xl z-10">
+            <h2 class="text-blue-500 font-extrabold tracking-[0.2em] uppercase text-base md:text-lg mb-6">
+                Software Engineer | .NET & DevOps Expert
+            </h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-[1.1]">
+                Build <span class="text-gradient">Secure & Scalable</span><br>Web Applications
+            </h1>
+            <p class="text-slate-300 text-lg md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium">
+                I specialize in <span class="text-white">.NET, ASP.NET Core, C#, and Entity Framework Core</span>. 
+                Designing high-performance RESTful APIs with <span class="text-blue-400">SQL & NoSQL</span>, 
+                <span class="text-blue-400">OAuth2/JWT</span>, and <span class="text-blue-400">Clean Architecture</span>, 
+                deploying via <span class="text-white">Docker, Kubernetes, GitOps, and Azure Cloud</span>.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-6">
+                <a href="#projects" class="bg-white text-slate-950 hover:bg-slate-200 px-10 py-5 rounded-2xl font-bold transition-all flex items-center gap-2 text-lg">
+                    View My Work <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <div class="flex items-center gap-5">
+                    <a href="https://github.com/Abobkeryousif" target="_blank" class="p-4 glass-card rounded-xl hover:text-blue-500 transition-colors">
+                        <i data-lucide="github" class="w-7 h-7"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abubker-yousif-93b148318/" target="_blank" class="p-4 glass-card rounded-xl hover:text-blue-500 transition-colors">
+                        <i data-lucide="linkedin" class="w-7 h-7"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="py-24 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-extrabold text-slate-800 mb-12">About Me</h2>
-            <div class="max-w-4xl mx-auto text-lg leading-relaxed text-slate-600">
-                <p class="mb-6">
-                    I am Abobker Yousif, Software Engineer & .NET Developer with solid skills in C#, ASP.NET Core, SQL Server, and PostgreSQL. Passionate
-about building scalable web applications and RESTful APIs, writing clean, maintainable code, and eager
-to learn and grow expertise in Azure cloud and modern DevOps practices.
-
-                </p>
-                <p class="mb-12">
-                    I believe that technology can make a positive difference in the world, and I constantly strive to learn new things.
-                </p>
-                
-              <!-- Skills & Tools Icons -->
-<h3 class="text-3xl font-bold text-slate-800 mb-8">Skills & Tools</h3>
-<div class="flex flex-wrap justify-center items-center gap-4">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" width="50" alt="C#" title="C#"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" width="50" alt=".NET Core" title=".NET Core"/>
-    <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" width="50" alt="SQL Server" title="SQL Server"/>
-    <img src="https://www.svgrepo.com/show/303301/postgresql-logo.svg" width="50" alt="PostgreSQL" title="PostgreSQL"/>
-    <img src="https://www.svgrepo.com/show/354272/redis.svg" width="50" alt="Redis" title="Redis"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="50" alt="Kubernetes" title="Kubernetes"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="50" alt="Docker" title="Docker"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" width="50" alt="Azure" title="Azure"/>
-    <img src="https://user-images.githubusercontent.com/64439609/212556407-f122dc0e-901c-4df7-960f-29a3b52c5349.png" width="50" alt="HTML" title="HTML"/>
-    <img src="https://user-images.githubusercontent.com/64439609/212556203-47a51702-fec1-4275-bafb-6afdea15b092.png" width="50" alt="CSS" title="CSS"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="50" alt="Bootstrap" title="Bootstrap"/>
-    <img src="https://user-images.githubusercontent.com/64439609/212556685-de9a7c04-31b0-43b6-af39-7c82ac13b321.png" width="50" alt="Git" title="Git"/>
-    <img src="https://user-images.githubusercontent.com/64439609/212556741-81407849-82c8-4926-854f-820e8a644375.png" width="50" alt="Visual Studio" title="Visual Studio"/>
-    <img src="https://user-images.githubusercontent.com/64439609/212556816-5f39489d-6cee-4f1c-997f-4d30a391287c.png" width="50" alt="VS Code" title="VS Code"/>
-    <img src="https://www.svgrepo.com/show/354202/postman-icon.svg" width="50" alt="Postman" title="Postman"/>
-</div>
-
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-900/40 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-3xl font-bold text-white mb-12 uppercase tracking-widest text-slate-500">Core Technologies</h3>
+            <div class="glass-card p-10 md:p-14 rounded-[3rem]">
+                <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14">
+                    <img class="skill-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" width="60" alt="C#"/>
+                    <img class="skill-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" width="60" alt=".NET"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" width="60" alt="SQL Server"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/303301/postgresql-logo.svg" width="60" alt="PostgreSQL"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/354272/redis.svg" width="60" alt="Redis"/>
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="60" alt="Kubernetes"/>
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="60" alt="Docker"/>
+                    <img class="skill-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" width="60" alt="Azure"/>
+                    <img class="skill-icon" src="https://logo.svgcdn.com/devicon/argocd-original.svg" width="60" alt="ArgoCD"/>
+                    <img class="skill-icon" src="https://user-images.githubusercontent.com/64439609/212556685-de9a7c04-31b0-43b6-af39-7c82ac13b321.png" width="60" alt="Git"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/354202/postman-icon.svg" width="60" alt="Postman"/>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-extrabold text-slate-800 text-center mb-16">My Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-white text-center mb-16 italic underline decoration-blue-500 underline-offset-8">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1: FoodRush -->
-                <div class="project-card" style="--card-accent-color: #FF6B35;">
-                    <img src="images/Foodrush.png" alt="FoodRush Project Image" class="w-full h-56 object-cover">
+                <div class="project-card">
+                    <div class="relative overflow-hidden group">
+                        <img src="images/Foodrush.png">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">FoodRush</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project 
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge">ASP.NET 9</span>
+                            <span class="badge">CQRS</span>
                         </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">FoodRush</h3>
+                        <p class="text-slate-400 text-sm mb-6">Enterprise food delivery platform with MediatR and YARP Reverse Proxy.</p>
+                        <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
                     </div>
                 </div>
-
                 <!-- Project 2: Pexel_Store -->
-                <div class="project-card" style="--card-accent-color: #1E90FF;">
-                    <img src="images/pexelstore.png" alt="Pexel_Store Project Image" class="w-full h-56 object-cover">
+                <div class="project-card">
+                    <div class="relative overflow-hidden group">
+                        <img src="images/pexelstore.png">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Pexel_Store</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/Pexel_Store" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project 
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/Pexel_Store" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge">E-Commerce</span>
+                            <span class="badge">Security</span>
                         </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Pexel Store</h3>
+                        <p class="text-slate-400 text-sm mb-6">Scalable E-commerce solution focused on modern architecture and secure payments.</p>
+                        <a href="https://github.com/Abobkeryousif/Pexel_Store" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
                     </div>
                 </div>
-
                 <!-- Project 3: Wafra -->
-                <div class="project-card" style="--card-accent-color: #2ECC71;">
-                    <img src="images/Wafraa.jpg" alt="Wafra Project Image" class="w-full h-56 object-cover">
+                <div class="project-card">
+                    <div class="relative overflow-hidden group">
+                        <img src="images/Wafraa.jpg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Wafra</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/Wafra" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project 
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/Wafra" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge">PostgreSQL</span>
+                            <span class="badge">Healthcare</span>
                         </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Wafra</h3>
+                        <p class="text-slate-400 text-sm mb-6">Pharmacy medicine checker API with real-time availability tracking.</p>
+                        <a href="https://github.com/Abobkeryousif/Wafra" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Project 4: NZwalks -->
+                <div class="project-card">
+                    <div class="relative overflow-hidden">
+                        <img src="Nzwalks.jpg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="badge">ASP.NET Core</span>
+                            <span class="badge">SQL Server</span>
+                            <span class="badge">Auth</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">NZwalks</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">A specialized API for managing and discovering hiking walks in New Zealand, featuring robust authentication and comprehensive database management.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group mt-auto">
+                            Explore Project <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 4: OAuth2.0 -->
-                <div class="project-card" style="--card-accent-color: #F1C40F;">
-                    <img src="images/OAuth2.0.png" alt="OAuth2.0 Project Image" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">OAuth2.0</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/OAuth2.0" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project 
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/OAuth2.0" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
-                        </div>
+    <!-- Certifications Section -->
+    <section class="py-24 bg-slate-900/40 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-center text-slate-500 font-bold tracking-widest uppercase text-sm mb-12 italic">Professional Certifications</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">KodeKloud</p>
+                        <p class="text-white text-sm font-bold">Kubernetes And Cloud Native Assosiate Course</p>
                     </div>
                 </div>
-
-                <!-- Project 5: NZwalksFinalProject -->
-                <div class="project-card" style="--card-accent-color: #9B59B6;">
-                    <img src="images/Nzwalks.jpg" alt="NZwalksFinalProject Project Image" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">NZwalksFinalProject</h3>
-                        <div class="flex justify-between items-center mt-4">
-                            <a href="https://github.com/Abobkeryousif/NZwalksFinalProject" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-md flex items-center">
-                                View Project 
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                            <a href="https://github.com/Abobkeryousif/NZwalksFinalProject" target="_blank" class="text-slate-500 hover:text-slate-700 text-sm">Source Code</a>
-                        </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Udemy</p>
+                        <p class="text-white text-sm font-bold">ASP.NET Core API</p>
                     </div>
                 </div>
-
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Udemy</p>
+                        <p class="text-white text-sm font-bold">Fundamentals Database Engineering</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Udemy</p>
+                        <p class="text-white text-sm font-bold">Fundamentals Network Engineering</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-extrabold text-slate-800 mb-12">Contact Me</h2>
-            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                If you are interested in working with me or have any questions, feel free to get in touch.
-            </p>
-            <div class="flex justify-center gap-6 mt-8">
-                <a href="https://www.linkedin.com/in/abubker-yousif-93b148318/" target="_blank" class="text-slate-500 hover:text-blue-600 transition-transform duration-300 transform hover:scale-110" aria-label="LinkedIn">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.761-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-5xl font-extrabold text-white mb-8">Let's Connect</h3>
+            <p class="text-slate-400 text-xl mb-12">Open for new opportunities as a Software Engineer.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+                <a href="mailto:bakryhassona7@gmail.com" class="bg-white text-slate-950 px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-slate-200 transition-all shadow-xl text-lg w-full sm:w-auto">
+                    <i data-lucide="mail" class="w-6 h-6"></i> Send Email
                 </a>
-
-                <a href="tel:+966543927332" target="_blank" class="text-slate-500 hover:text-green-600 transition-transform duration-300 transform hover:scale-110" aria-label="Call">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.03.75-.25 1.02l-2.2 2.2z"></path></svg>
+                <a href="tel:+966543927332" class="glass-card px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-slate-800 transition-all text-lg w-full sm:w-auto">
+                    <i data-lucide="phone" class="w-6 h-6"></i> +966 543927332
                 </a>
+            </div>
 
-                <a href="https://github.com/Abobkeryousif" target="_blank" class="text-slate-500 hover:text-gray-800 transition-transform duration-300 transform hover:scale-110" aria-label="GitHub">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.799 8.207 11.387.6.11.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.332-1.757-1.332-1.757-1.09-.745.083-.73.083-.73 1.205.086 1.838 1.238 1.838 1.238 1.07 1.834 2.807 1.304 3.49.997.108-.775.418-1.304.762-1.604-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.382 1.236-3.22-.124-.304-.536-1.52.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.4 3.003-.404 1.02.004 2.046.138 3.003.404 2.293-1.552 3.301-1.23 3.301-1.23.653 1.656.241 2.872.118 3.176.77.838 1.236 1.91 1.236 3.22 0 4.61-2.806 5.624-5.478 5.922.43.37.823 1.096.823 2.21v3.283c0 .32.218.694.825.576 4.765-1.589 8.202-6.085 8.202-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+            <!-- Social Links in Contact Area -->
+            <div class="mt-12 flex justify-center gap-8">
+                <a href="https://github.com/Abobkeryousif" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-2 font-semibold transition-colors">
+                    <i data-lucide="github" class="w-5 h-5"></i> GitHub
                 </a>
-
-                <a href="mailto:bakryhassona7@gmail.com" class="text-slate-500 hover:text-red-600 transition-transform duration-300 transform hover:scale-110" aria-label="Email">
-                    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065l-11.938-6.904c.135-.361.359-.688.646-.961.288-.274.63-.489 1.004-.635.375-.146.774-.221 1.177-.221h17.222c.403 0 .802.075 1.177.221.374.146.716.361 1.004.635.287.273.511.6.646.961l-11.938 6.904zm0 2.935l12-6.947v10.947c0 .552-.448 1-1 1h-22c-.552 0-1-.448-1-1v-10.947l12 6.947z"></path></svg>
+                <a href="https://www.linkedin.com/in/abubker-yousif-93b148318/" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-2 font-semibold transition-colors">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-800 text-slate-300 text-center py-8">
-        <p>&copy; 2025 Abobker Yousif. All Rights Reserved.</p>
-    </footer>
+    <script>
+        lucide.createIcons();
+        
+        // Scroll animation logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-12');
+                }
+            });
+        }, { threshold: 0.1 });
 
+        document.querySelectorAll('.glass-card, .project-card, h1, h2, h3, p').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-12', 'transition-all', 'duration-1000');
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
-
