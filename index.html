@@ -4,150 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abubaker Yousif | Software Engineer</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #0b0f1a;
             color: #f1f5f9;
         }
-
         .glass-nav {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         .glass-card {
             background: rgba(30, 41, 59, 0.4);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .glass-card:hover {
-            transform: translateY(-8px);
+            background: rgba(30, 41, 59, 0.6);
             border-color: #3b82f6;
+            transform: translateY(-8px);
         }
-
         .text-gradient {
-            background: linear-gradient(135deg, #60a5fa, #a855f7);
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .hero-blob {
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(59,130,246,0.18), transparent 70%);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
             filter: blur(80px);
             z-index: -1;
         }
-
         .project-card {
             background: rgba(30, 41, 59, 0.4);
             border-radius: 1.5rem;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.08);
-            transition: 0.4s;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
         }
-
         .project-card:hover {
-            transform: translateY(-10px);
             border-color: #3b82f6;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
         }
-
+        .skill-icon {
+            transition: all 0.3s ease;
+            filter: grayscale(20%);
+        }
+        .skill-icon:hover {
+            filter: grayscale(0%);
+            transform: scale(1.2) rotate(5deg);
+        }
         .badge {
-            background: rgba(59,130,246,0.1);
+            background: rgba(59, 130, 246, 0.1);
             color: #60a5fa;
             padding: 4px 12px;
-            border-radius: 999px;
-            font-size: 12px;
-        }
-
-        .skill-icon {
-            transition: 0.3s;
-        }
-
-        .skill-icon:hover {
-            transform: scale(1.15);
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
     </style>
 </head>
+<body class="antialiased">
 
-<body>
-
-<!-- NAV -->
-<nav class="fixed w-full z-50 top-0 px-6 py-4">
-    <div class="max-w-6xl mx-auto flex justify-between glass-nav px-6 py-3 rounded-2xl">
-        <div class="text-white font-bold">Abubaker<span class="text-blue-500">.</span></div>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section class="relative min-h-screen flex items-center justify-center text-center px-6">
-    <div class="hero-blob top-1/4 left-1/4"></div>
-
-    <div class="max-w-5xl">
-        <h2 class="text-blue-400 font-bold tracking-widest uppercase mb-4">
-            Software Engineer | .NET & DevOps
-        </h2>
-
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-8">
-            Build <span class="text-gradient">Secure & Scalable</span><br>Web Applications
-        </h1>
-
-        
-        <p class="text-slate-300 text-lg md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium">
-            I specialize in <span class="text-white">.NET, ASP.NET Core, C#, and Entity Framework Core</span>.
-            Designing high-performance RESTful APIs with <span class="text-blue-400">SQL & NoSQL</span>,
-            <span class="text-blue-400">OAuth2/JWT</span>, and <span class="text-blue-400">Clean Architecture</span>,
-            deploying via <span class="text-white">Docker, Kubernetes, GitOps, and Azure Cloud</span>.
-        </p>
-        
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="py-24 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-
-        <h2 class="text-3xl mb-10 text-gray-400">Core Technologies</h2>
-
-        <div class="glass-card p-10 rounded-3xl flex flex-wrap justify-center gap-10">
-
-            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="60">
-            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" width="60">
-            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="60">
-            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="60">
-
-            <!-- ADDED -->
-            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" width="60">
-
-            <img class="skill-icon" src="https://logo.svgcdn.com/devicon/argocd-original.svg" width="60">
-
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass-nav rounded-2xl px-6 py-3">
+            <a href="#" class="text-xl font-bold tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">AY</div>
+                <span>Abubaker<span class="text-blue-500">.</span></span>
+            </a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-white transition-colors">Skills</a></li>
+                <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <a href="mailto:bakryhassona7@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-blue-900/20">
+                    Email Me
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden px-6 text-center">
+        <div class="hero-blob top-1/4 left-1/4"></div>
+        <div class="hero-blob bottom-1/4 right-1/4" style="opacity: 0.5;"></div>
+        
+        <div class="max-w-5xl z-10">
+            <h2 class="text-blue-500 font-extrabold tracking-[0.2em] uppercase text-base md:text-lg mb-6">
+                Software Engineer | .NET & DevOps Expert
+            </h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-[1.1]">
+                Build <span class="text-gradient">Secure & Scalable</span><br>Web Applications
+            </h1>
+            <p class="text-slate-300 text-lg md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium">
+                I specialize in <span class="text-white">.NET, ASP.NET Core, C#, and Entity Framework Core</span>. 
+                Designing high-performance RESTful APIs with <span class="text-blue-400">SQL & NoSQL</span>, 
+                <span class="text-blue-400">OAuth2/JWT</span>, and <span class="text-blue-400">Clean Architecture</span>, 
+                deploying via <span class="text-white">Docker, Kubernetes, GitOps, and Azure Cloud</span>.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-6">
+                <a href="#projects" class="bg-white text-slate-950 hover:bg-slate-200 px-10 py-5 rounded-2xl font-bold transition-all flex items-center gap-2 text-lg">
+                    View My Work <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <div class="flex items-center gap-5">
+                    <a href="https://github.com/Abobkeryousif" target="_blank" class="p-4 glass-card rounded-xl hover:text-blue-500 transition-colors">
+                        <i data-lucide="github" class="w-7 h-7"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abubker-yousif-93b148318/" target="_blank" class="p-4 glass-card rounded-xl hover:text-blue-500 transition-colors">
+                        <i data-lucide="linkedin" class="w-7 h-7"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2 class="text-4xl text-center font-bold mb-14">Featured Projects</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-900/40 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-3xl font-bold text-white mb-12 uppercase tracking-widest text-slate-500">Core Technologies</h3>
+            <div class="glass-card p-10 md:p-14 rounded-[3rem]">
+                <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14">
+                    <img class="skill-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" width="60" alt="C#"/>
+                    <img class="skill-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" width="60" alt=".NET"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" width="60" alt="SQL Server"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/303301/postgresql-logo.svg" width="60" alt="PostgreSQL"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/354272/redis.svg" width="60" alt="Redis"/>
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="60" alt="Kubernetes"/>
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="60" alt="Docker"/>
+                    <img class="skill-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" width="60" alt="Azure"/>
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" width="60" alt="GitHub Actions"/>
+                    <img class="skill-icon" src="https://logo.svgcdn.com/devicon/argocd-original.svg" width="60" alt="ArgoCD"/>
+                    <img class="skill-icon" src="https://user-images.githubusercontent.com/64439609/212556685-de9a7c04-31b0-43b6-af39-7c82ac13b321.png" width="60" alt="Git"/>
+                    <img class="skill-icon" src="https://www.svgrepo.com/show/354202/postman-icon.svg" width="60" alt="Postman"/>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-white text-center mb-16 italic underline decoration-blue-500 underline-offset-8">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- iWallet FIRST -->
-            <div class="project-card">
-                <img src="images/iWallet.png">
+                  <div class="project-card">
+                <div class="relative overflow-hidden group">
+                    <img src="images/iWallet.png">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                </div>
+
                 <div class="p-6">
-                    <div class="flex gap-2 mb-3 flex-wrap">
+                    <div class="flex gap-2 mb-3">
                         <span class="badge">.NET 10</span>
                         <span class="badge">Docker</span>
                         <span class="badge">Kubernetes</span>
@@ -155,80 +174,219 @@
                         <span class="badge">GitOps</span>
                     </div>
 
-                    <h3 class="text-xl font-bold">iWallet</h3>
-                    <p class="text-gray-400 text-sm">Cloud-native digital wallet backend system.</p>
+                    <h3 class="text-2xl font-bold text-white mb-2">iWallet</h3>
+
+                    <p class="text-slate-400 text-sm mb-6">
+                        Smart Digital Wallet Backend System.
+                    </p>
+
+                    <a href="https://github.com/Abobkeryousif/iWallet"
+                       target="_blank"
+                       class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                        Explore
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- FoodRush -->
+            <!-- Project 1: FoodRush -->
             <div class="project-card">
-                <img src="images/Foodrush.png">
+                <div class="relative overflow-hidden group">
+                    <img src="images/Foodrush.png">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                </div>
+
                 <div class="p-6">
-                    <span class="badge">.NET Core 9</span>
-                    <h3 class="text-xl font-bold mt-2">FoodRush</h3>
+                    <div class="flex gap-2 mb-3">
+                        <span class="badge">.NET Core 9</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">FoodRush</h3>
+                    <p class="text-slate-400 text-sm mb-6">Enterprise food delivery platform.</p>
+
+                    <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank"
+                       class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                        Explore
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </div>
+                <!-- Project 1: FoodRush -->
+                <div class="project-card">
+                    <div class="relative overflow-hidden group">
+                        <img src="images/Foodrush.png">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge">.NET Core 9</span>
 
-            <!-- Pexel Store -->
-            <div class="project-card">
-                <img src="images/pexelstore.png">
-                <div class="p-6">
-                    <span class="badge">E-Commerce</span>
-                    <h3 class="text-xl font-bold mt-2">Pexel Store</h3>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">FoodRush</h3>
+                        <p class="text-slate-400 text-sm mb-6">Enterprise food delivery platform.</p>
+                        <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Wafra -->
-            <div class="project-card">
-                <img src="images/Wafraa.jpg">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold">Wafra</h3>
+                <!-- Project 2: Pexel_Store -->
+                <div class="project-card">
+                    <div class="relative overflow-hidden group">
+                        <img src="images/pexelstore.png">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge">E-Commerce</span>
+                            <span class="badge">Security</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Pexel Store</h3>
+                        <p class="text-slate-400 text-sm mb-6">Scalable E-commerce solution focused on modern architecture and secure payments.</p>
+                        <a href="https://github.com/Abobkeryousif/Pexel_Store" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <!-- Project 3: Wafra -->
+                <div class="project-card">
+                    <div class="relative overflow-hidden group">
+                        <img src="images/Wafraa.jpg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
 
-            <!-- NZwalks -->
-            <div class="project-card">
-                <img src="images/Nzwalks.jpg">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold">NZwalks</h3>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Wafra</h3>
+                        <p class="text-slate-400 text-sm mb-6">Pharmacy medicine checker API with real-time availability tracking.</p>
+                        <a href="https://github.com/Abobkeryousif/Wafra" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
+                   <!-- Project 4: NZwalks -->
+                <div class="project-card">
+                    <div class="relative overflow-hidden">
+                        <img src="images/Nzwalks.jpg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="badge">.NET Core 8</span>
+                            <span class="badge">SQL Server</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">NZwalks</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">A specialized API for managing and discovering hiking walks in New Zealand, featuring robust authentication and comprehensive database management.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group mt-auto">
+                            Explore Project <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    </div>
-</section>
+        
+    </section>
 
-<!-- CERTIFICATIONS -->
-<section class="py-24 px-6 bg-slate-900/40">
-    <div class="max-w-6xl mx-auto text-center">
+  
 
-        <h2 class="text-3xl mb-10 text-gray-400">Professional Certifications</h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-             <div class="glass-card p-6 rounded-xl">
-                <p class="font-bold">GitHub Actions</p>
+    <!-- Certifications Section -->
+    <section class="py-24 bg-slate-900/40 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-center text-slate-500 font-bold tracking-widest uppercase text-sm mb-12 italic">Professional Certifications</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                 <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Kode Kloude</p>
+                        <p class="text-white text-sm font-bold">Github Actions</p>
+                    </div>
+                </div>
+                 <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Kode Kloude</p>
+                        <p class="text-white text-sm font-bold">GitOps With ArgoCD</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Kode Kloud</p>
+                        <p class="text-white text-sm font-bold">Kubernetes And Cloud Native Assosiate Course</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Udemy</p>
+                        <p class="text-white text-sm font-bold">ASP.NET Core API</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Udemy</p>
+                        <p class="text-white text-sm font-bold">Fundamentals Database Engineering</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Udemy</p>
+                        <p class="text-white text-sm font-bold">Fundamentals Network Engineering</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-5xl font-extrabold text-white mb-8">Let's Connect</h3>
+            <p class="text-slate-400 text-xl mb-12">Open for new opportunities as a Software Engineer.</p>
             
-            <div class="glass-card p-6 rounded-xl">
-                <p class="font-bold">GitOps with ArgoCD</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+                <a href="mailto:bakryhassona7@gmail.com" class="bg-white text-slate-950 px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-slate-200 transition-all shadow-xl text-lg w-full sm:w-auto">
+                    <i data-lucide="mail" class="w-6 h-6"></i> Send Email
+                </a>
+                <a href="tel:+966543927332" class="glass-card px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-slate-800 transition-all text-lg w-full sm:w-auto">
+                    <i data-lucide="phone" class="w-6 h-6"></i> +966 543927332
+                </a>
             </div>
 
-            <div class="glass-card p-6 rounded-xl">
-                <p>Kubernetes and Cloud-Native Associate Course</p>
+            <!-- Social Links in Contact Area -->
+            <div class="mt-12 flex justify-center gap-8">
+                <a href="https://github.com/Abobkeryousif" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-2 font-semibold transition-colors">
+                    <i data-lucide="github" class="w-5 h-5"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/abubker-yousif-93b148318/" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-2 font-semibold transition-colors">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+                </a>
             </div>
-
-            <div class="glass-card p-6 rounded-xl">
-                <p>ASP.NET Core API</p>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    lucide.createIcons();
-</script>
+    <script>
+        lucide.createIcons();
+        
+        // Scroll animation logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-12');
+                }
+            });
+        }, { threshold: 0.1 });
 
+        document.querySelectorAll('.glass-card, .project-card, h1, h2, h3, p').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-12', 'transition-all', 'duration-1000');
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
+
