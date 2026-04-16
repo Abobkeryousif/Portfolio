@@ -26,44 +26,56 @@
             background: rgba(30, 41, 59, 0.4);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .glass-card:hover {
             transform: translateY(-8px);
             border-color: #3b82f6;
-            background: rgba(30, 41, 59, 0.6);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59,130,246,0.18), transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
         }
 
         .project-card {
             background: rgba(30, 41, 59, 0.4);
             border-radius: 1.5rem;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: 0.4s;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
             border-color: #3b82f6;
-            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
         }
 
         .badge {
-            background: rgba(59, 130, 246, 0.1);
+            background: rgba(59,130,246,0.1);
             color: #60a5fa;
             padding: 4px 12px;
             border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 700;
+            font-size: 12px;
         }
 
         .skill-icon {
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .skill-icon:hover {
-            transform: scale(1.2);
+            transform: scale(1.15);
         }
     </style>
 </head>
@@ -72,20 +84,54 @@
 
 <!-- NAV -->
 <nav class="fixed w-full z-50 top-0 px-6 py-4">
-    <div class="max-w-6xl mx-auto flex justify-between items-center glass-nav rounded-2xl px-6 py-3">
-        <div class="text-xl font-bold">Abubaker.</div>
+    <div class="max-w-6xl mx-auto flex justify-between glass-nav px-6 py-3 rounded-2xl">
+        <div class="text-white font-bold">Abubaker<span class="text-blue-500">.</span></div>
     </div>
 </nav>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6">
-    <div>
-        <h1 class="text-5xl font-bold mb-6">
-            Software Engineer
+<section class="relative min-h-screen flex items-center justify-center text-center px-6">
+    <div class="hero-blob top-1/4 left-1/4"></div>
+
+    <div class="max-w-5xl">
+        <h2 class="text-blue-400 font-bold tracking-widest uppercase mb-4">
+            Software Engineer | .NET & DevOps
+        </h2>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-8">
+            Build <span class="text-gradient">Secure & Scalable</span><br>Web Applications
         </h1>
-        <p class="text-slate-400 max-w-2xl">
-            .NET, Cloud, DevOps, and Scalable Backend Systems
+
+        
+        <p class="text-slate-300 text-lg md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium">
+            I specialize in <span class="text-white">.NET, ASP.NET Core, C#, and Entity Framework Core</span>.
+            Designing high-performance RESTful APIs with <span class="text-blue-400">SQL & NoSQL</span>,
+            <span class="text-blue-400">OAuth2/JWT</span>, and <span class="text-blue-400">Clean Architecture</span>,
+            deploying via <span class="text-white">Docker, Kubernetes, GitOps, and Azure Cloud</span>.
         </p>
+        
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+
+        <h2 class="text-3xl mb-10 text-gray-400">Core Technologies</h2>
+
+        <div class="glass-card p-10 rounded-3xl flex flex-wrap justify-center gap-10">
+
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="60">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" width="60">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="60">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="60">
+
+            <!-- ADDED -->
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" width="60">
+
+            <img class="skill-icon" src="https://logo.svgcdn.com/devicon/argocd-original.svg" width="60">
+
+        </div>
     </div>
 </section>
 
@@ -93,18 +139,15 @@
 <section id="projects" class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
 
-        <h2 class="text-4xl font-extrabold text-white text-center mb-16">
-            Featured Projects
-        </h2>
+        <h2 class="text-4xl text-center font-bold mb-14">Featured Projects</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-              <!-- iWallet -->
+            <!-- iWallet FIRST -->
             <div class="project-card">
-                <img src="image/iWallet.png">
-
+                <img src="images/iWallet.png">
                 <div class="p-6">
-                    <div class="flex flex-wrap gap-2 mb-3">
+                    <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="badge">.NET 10</span>
                         <span class="badge">Docker</span>
                         <span class="badge">Kubernetes</span>
@@ -113,24 +156,16 @@
                     </div>
 
                     <h3 class="text-xl font-bold">iWallet</h3>
-
-                    <p class="text-slate-400 text-sm mt-2">
-                        Cloud-Native Digital Wallet Backend System
-                    </p>
-
-                    <a href="https://github.com/Abobkeryousif/iWallet"
-                       class="text-blue-500 text-sm font-bold mt-4 inline-block">
-                        Explore →
-                    </a>
+                    <p class="text-gray-400 text-sm">Cloud-native digital wallet backend system.</p>
                 </div>
             </div>
-            
-            
+
             <!-- FoodRush -->
             <div class="project-card">
                 <img src="images/Foodrush.png">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold">FoodRush</h3>
+                    <span class="badge">.NET Core 9</span>
+                    <h3 class="text-xl font-bold mt-2">FoodRush</h3>
                 </div>
             </div>
 
@@ -138,7 +173,8 @@
             <div class="project-card">
                 <img src="images/pexelstore.png">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold">Pexel Store</h3>
+                    <span class="badge">E-Commerce</span>
+                    <h3 class="text-xl font-bold mt-2">Pexel Store</h3>
                 </div>
             </div>
 
@@ -158,69 +194,32 @@
                 </div>
             </div>
 
-          
-
         </div>
     </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section class="py-24 px-6 bg-slate-900/40">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto text-center">
 
-        <h3 class="text-center text-slate-400 mb-12 uppercase tracking-widest text-sm font-bold">
-         Certifications
-        </h3>
+        <h2 class="text-3xl mb-10 text-gray-400">Professional Certifications</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <!-- NEW FIRST -->
-
-             <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
-                <i data-lucide="github"></i>
-                <div>
-                    <p class="text-white font-bold">GitHub Actions</p>
-                </div>
+             <div class="glass-card p-6 rounded-xl">
+                <p class="font-bold">GitHub Actions</p>
             </div>
             
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
-                <i data-lucide="git-branch"></i>
-                <div>
-                    <p class="text-white font-bold">GitOps with ArgoCD</p>
-                </div>
+            <div class="glass-card p-6 rounded-xl">
+                <p class="font-bold">GitOps with ArgoCD</p>
             </div>
 
-           
-
-            <!-- UPDATED -->
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
-                <i data-lucide="award"></i>
-                <div>
-                    <p class="text-white font-bold">
-                        Kubernetes and Cloud-Native Associate Course
-                    </p>
-                </div>
+            <div class="glass-card p-6 rounded-xl">
+                <p>Kubernetes and Cloud-Native Associate Course</p>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
-                <i data-lucide="award"></i>
-                <div>
-                    <p class="text-white font-bold">ASP.NET Core API</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
-                <i data-lucide="award"></i>
-                <div>
-                    <p class="text-white font-bold">Database Engineering</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
-                <i data-lucide="award"></i>
-                <div>
-                    <p class="text-white font-bold">Network Engineering</p>
-                </div>
+            <div class="glass-card p-6 rounded-xl">
+                <p>ASP.NET Core API</p>
             </div>
 
         </div>
