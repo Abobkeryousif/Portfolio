@@ -153,20 +153,25 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-white text-center mb-16 italic underline decoration-blue-500 underline-offset-8">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <!-- Projects Section -->
+<section id="projects" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
 
-                  <div class="project-card">
+        <h2 class="text-4xl font-extrabold text-white text-center mb-16 italic underline decoration-blue-500 underline-offset-8">
+            Featured Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- iWallet -->
+            <div class="project-card flex flex-col h-full">
                 <div class="relative overflow-hidden group">
-                    <img src="images/iWallet.png">
+                    <img src="images/iWallet.png" class="w-full h-48 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
                 </div>
 
-                <div class="p-6">
-                    <div class="flex gap-2 mb-3">
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex flex-wrap gap-2 mb-3">
                         <span class="badge">.NET 10</span>
                         <span class="badge">Docker</span>
                         <span class="badge">Kubernetes</span>
@@ -181,89 +186,113 @@
 
                     <a href="https://github.com/Abobkeryousif/iWallet"
                        target="_blank"
-                       class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                       class="mt-auto text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
                         Explore
                         <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
                     </a>
                 </div>
             </div>
-                <!-- Project 1: FoodRush -->
-                <div class="project-card">
-                    <div class="relative overflow-hidden group">
-                        <img src="images/Foodrush.png">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge">.NET Core 9</span>
 
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">FoodRush</h3>
-                        <p class="text-slate-400 text-sm mb-6">Enterprise food delivery platform.</p>
-                        <a href="https://github.com/Abobkeryousif/FoodRush" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
-                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project 2: Pexel_Store -->
-                <div class="project-card">
-                    <div class="relative overflow-hidden group">
-                        <img src="images/pexelstore.png">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge">E-Commerce</span>
-                            <span class="badge">Security</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Pexel Store</h3>
-                        <p class="text-slate-400 text-sm mb-6">Scalable E-commerce solution focused on modern architecture and secure payments.</p>
-                        <a href="https://github.com/Abobkeryousif/Pexel_Store" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
-                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project 3: Wafra -->
-                <div class="project-card">
-                    <div class="relative overflow-hidden group">
-                        <img src="images/Wafraa.jpg">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex gap-2 mb-3">
-
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Wafra</h3>
-                        <p class="text-slate-400 text-sm mb-6">Pharmacy medicine checker API with real-time availability tracking.</p>
-                        <a href="https://github.com/Abobkeryousif/Wafra" target="_blank" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
-                            Explore <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+            <!-- FoodRush -->
+            <div class="project-card flex flex-col h-full">
+                <div class="relative overflow-hidden group">
+                    <img src="images/Foodrush.png" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
                 </div>
 
-                   <!-- Project 4: NZwalks -->
-                <div class="project-card">
-                    <div class="relative overflow-hidden">
-                        <img src="images/Nzwalks.jpg">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="badge">.NET Core 9</span>
                     </div>
-                    <div class="p-6 flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="badge">.NET Core 8</span>
-                            <span class="badge">SQL Server</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">NZwalks</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">A specialized API for managing and discovering hiking walks in New Zealand, featuring robust authentication and comprehensive database management.</p>
-                        <a href="#" class="text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group mt-auto">
-                            Explore Project <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">FoodRush</h3>
+                    <p class="text-slate-400 text-sm mb-6">Enterprise food delivery platform.</p>
+
+                    <a href="https://github.com/Abobkeryousif/FoodRush"
+                       target="_blank"
+                       class="mt-auto text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                        Explore
+                    </a>
                 </div>
-                
             </div>
+
+            <!-- Pexel Store -->
+            <div class="project-card flex flex-col h-full">
+                <div class="relative overflow-hidden group">
+                    <img src="images/pexelstore.png" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="badge">E-Commerce</span>
+                        <span class="badge">Security</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">Pexel Store</h3>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Scalable E-commerce solution focused on modern architecture and secure payments.
+                    </p>
+
+                    <a href="https://github.com/Abobkeryousif/Pexel_Store"
+                       target="_blank"
+                       class="mt-auto text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                        Explore
+                    </a>
+                </div>
+            </div>
+
+            <!-- Wafra -->
+            <div class="project-card flex flex-col h-full">
+                <div class="relative overflow-hidden group">
+                    <img src="images/Wafraa.jpg" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex flex-wrap gap-2 mb-3"></div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">Wafra</h3>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Pharmacy medicine checker API with real-time availability tracking.
+                    </p>
+
+                    <a href="https://github.com/Abobkeryousif/Wafra"
+                       target="_blank"
+                       class="mt-auto text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                        Explore
+                    </a>
+                </div>
+            </div>
+
+            <!-- NZwalks -->
+            <div class="project-card flex flex-col h-full">
+                <div class="relative overflow-hidden group">
+                    <img src="images/Nzwalks.jpg" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="badge">.NET Core 8</span>
+                        <span class="badge">SQL Server</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">NZwalks</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        A specialized API for managing and discovering hiking walks in New Zealand.
+                    </p>
+
+                    <a href="#"
+                       class="mt-auto text-blue-500 hover:text-blue-400 font-bold text-sm flex items-center gap-1 group">
+                        Explore Project
+                    </a>
+                </div>
+            </div>
+
         </div>
-        
-    </section>
+    </div>
+</section>
 
   
 
